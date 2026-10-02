@@ -1,0 +1,32 @@
+p, blockquote { 
+  color: rgb(207, 23, 23); 
+} 
+
+h1, h2 { 
+  color: black; 
+  background-color: #e966bd; 
+} 
+
+ul { 
+  list-style-type: none; 
+} 
+
+a { 
+  font-weight: bold; 
+} 
+
+a:link, a:visited { 
+  color: rgb(170, 90, 170); 
+  text-decoration: none; 
+} 
+
+a:hover { 
+  text-decoration: underline; 
+  color: rgb(217, 219, 217); 
+  background-color: rgb(27, 27, 129); 
+} 
+
+a:active { 
+  color: orange; 
+  background-color: rgb(16, 16, 102); 
+}
