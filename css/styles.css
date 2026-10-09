@@ -1,32 +1,63 @@
-p, blockquote { 
-  color: rgb(207, 23, 23); 
-} 
+/* Base Page Style */
+body {
+  font-family: 'Courier New', Courier, monospace; /* Retro tech font */
+  background-color: #0b0612; /* Clean dark purple-black */
+  color: #00ffcc; /* Cyber cyan text */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 
-h1, h2 { 
-  color: black; 
-  background-color: #e966bd; 
-} 
+/* Page Title */
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ff007f; /* Clean pink glow */
+  margin-bottom: 20px;
+}
 
-ul { 
-  list-style-type: none; 
-} 
+/* Divider Line */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ff007f; /* Solid pink laser line */
+  margin-bottom: 30px;
+}
 
-a { 
-  font-weight: bold; 
-} 
+/* Week Titles */
+h2 {
+  font-size: 1.1rem;
+  color: #ff007f; /* Hot pink */
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
 
-a:link, a:visited { 
-  color: rgb(170, 90, 170); 
-  text-decoration: none; 
-} 
+/* Lists and Links */
+ul {
+  list-style-type: none; /* Removes bullets */
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
 
-a:hover { 
-  text-decoration: underline; 
-  color: rgb(217, 219, 217); 
-  background-color: rgb(27, 27, 129); 
-} 
+ul li {
+  margin-bottom: 8px;
+}
 
-a:active { 
-  color: orange; 
-  background-color: rgb(16, 16, 102); 
+/* Link Actions */
+ul a:link, ul a:visited {
+  color: #00ffcc; /* Cyan links */
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s ease;
+}
+
+ul a:hover {
+  color: #ffffff; /* Turns white on hover */
+  text-shadow: 0 0 5px #00ffcc; /* Subtle cyan glow */
+  transform: translateX(4px); /* Shifts slightly right */
+}
+
+ul a:active {
+  color: #ff007f; /* Flashes pink when clicked */
 }
