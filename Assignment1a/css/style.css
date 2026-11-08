@@ -1,0 +1,305 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace; 
+    line-height: 1.6;
+    color: #00ffcc; 
+    background: url('../images/Outrun.gif') center center / cover no-repeat fixed #0a0a12; 
+    cursor: url('../images/normal.cur'), auto;
+    display: flex;
+    flex-direction: column;    
+    min-height: 100vh;         
+}
+
+header {
+    background-color: #020205;
+    color: #ff0055; 
+    padding: 30px;
+    border-bottom: 3px solid #ff0055;
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;   
+    align-items: center;       
+    flex-shrink: 0;            
+}
+
+nav {
+    display: flex;
+    flex-direction: row;       
+    justify-content: center;   
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+main {
+    max-width: 800px;
+    width: calc(100% - 40px); 
+    padding: 25px;
+    margin: 40px auto; 
+    background-color: #05050a; 
+    border: 2px solid #00ffcc;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    box-sizing: border-box;
+    flex-grow: 1;              
+    flex-shrink: 0;            
+    flex-basis: auto;          
+    min-height: 450px; 
+
+    /* THE FIX: Moves the pulse loop onto the global main tag so it works everywhere */
+    animation: main-pulse 4s infinite alternate ease-in-out;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #020205;
+    color: #64748b;
+    border-top: 2px solid #ff0055;
+    flex-shrink: 0;            
+}
+
+h1, h2, h3 {
+    color: #ff0055;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 0, 85, 0.6);
+}
+
+nav a, main a {
+    cursor: url('../images/link.cur'), pointer;
+}
+
+p, li, blockquote, h1, h2, h3, th, td, figcaption {
+    cursor: url('../images/text.cur'), text;
+}
+
+#main-content {
+    display: block;
+    animation: main-pulse 4s infinite alternate ease-in-out;
+}
+
+.feature-pic {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid #ff0055;
+    box-shadow: 0 0 12px rgba(255, 0, 85, 0.5);
+    text-align: center;
+    animation: photo-pulse 3s infinite alternate ease-in-out;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+    flex: 0 1 auto; 
+}
+
+nav a:link {
+    color: #00ffcc;
+}
+
+nav a:visited {
+    color: #00b399;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #ff0055;
+    box-shadow: 0 0 15px #ff0055;
+}
+
+nav a:active {
+    color: #ff9900;
+}
+
+.active-nav {
+    border: 1px solid #00ffcc;
+    background-color: rgba(0, 255, 204, 0.1);
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.4);
+    animation: nav-pulse 2s infinite alternate ease-in-out;
+}
+
+main a {
+    color: #ff9900;
+    text-decoration: none;
+    border-bottom: 1px dotted #ff9900;
+}
+
+main a:hover {
+    color: #ffffff;
+    background-color: #ff9900;
+}
+
+figure {
+    margin: 25px 0;
+    text-align: center;
+}
+
+figcaption {
+    font-family: monospace;
+    color: #00b399;
+    margin-top: 10px;
+    font-size: 0.85em;
+}
+
+blockquote {
+    background: rgba(255, 0, 85, 0.05);
+    border-left: 6px solid #ff0055;
+    margin: 25px 0;
+    padding: 15px;
+    box-shadow: inset 0 0 10px rgba(255, 0, 85, 0.1);
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    font-size: 0.85em;
+    color: #ff9900;
+    margin-top: 5px;
+}
+
+.hobby-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(0, 255, 204, 0.3);
+    animation: table-pulse 5s infinite alternate ease-in-out;
+}
+
+.hobby-table th, .hobby-table td {
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    padding: 14px;
+    text-align: left;
+}
+
+.hobby-table th {
+    background-color: rgba(0, 255, 204, 0.15);
+    color: #00ffcc;
+    text-transform: uppercase;
+    border-bottom: 2px solid #00ffcc;
+}
+
+.hobby-table tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.hobby-table tbody tr:hover {
+    background-color: rgba(0, 255, 204, 0.1);
+    color: #ffffff;
+}
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background-color: #020205;
+    border-bottom: 2px solid #ff9900;
+    padding: 8px 0;
+    flex-shrink: 0;
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee-scroll 20s linear infinite;
+    width: max-content;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding-right: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #ff9900;
+    letter-spacing: 2px;
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes main-pulse {
+    0% {
+        border-color: #00ffcc;
+        box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    }
+    100% {
+        border-color: #ff0055;
+        box-shadow: 0 0 25px rgba(255, 0, 85, 0.5);
+    }
+}
+
+@keyframes photo-pulse {
+    0% {
+        border-color: #ff0055;
+        box-shadow: 0 0 8px rgba(255, 0, 85, 0.4);
+    }
+    100% {
+        border-color: #ff9900;
+        box-shadow: 0 0 20px rgba(255, 153, 0, 0.7);
+    }
+}
+
+@keyframes nav-pulse {
+    0% {
+        border-color: #00ffcc;
+        box-shadow: 0 0 4px rgba(0, 255, 204, 0.3);
+    }
+    100% {
+        border-color: #ffffff;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes table-pulse {
+    0% {
+        border-color: rgba(0, 255, 204, 0.3);
+        box-shadow: 0 0 5px rgba(0, 255, 204, 0.1);
+    }
+    100% {
+        border-color: rgba(0, 255, 204, 0.8);
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+    }
+}
+/* 
+REFERENCES & CODE ATTRIBUTIONS
+I used the following tutorials, platforms, and documentation to help build 
+the layouts, animations, and custom assets for this project:
+
+1. Page Layout (CSS Flexbox):
+   - URL: https://mozilla.org
+   - Adaptation: Set up a full-height column stack on the body to keep the 
+    footer locked at the bottom without background alignment bugs.
+
+2. Moving Banner (CSS Marquee Animation):
+   - URL: https://w3schools.in
+   - Adaptation: Replaced the old marquee tag with CSS keyframe transforms 
+    so the text scrolls smoothly and passes the W3C validator.
+
+3. Custom Mouse Pointers:
+   - URL: https://custom-cursor.com
+   - Adaptation: Linked custom .cur paths sourced from Custom Cursor with 
+    standard system mouse fallbacks so the pointers morph over links.
+
+4. UI Design Accents (Neon Pulse Borders & Table Striping):
+   - URL: https://w3schools.com
+   - Adaptation: Created continuous color-shifting pulsing animations on 
+    the card frames and stylized alternating striped rows on data tables.
+
+*/
